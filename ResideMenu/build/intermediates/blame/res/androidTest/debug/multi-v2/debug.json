@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/bo108220/AndroidStudioProjects/MyResideMenu/ResideMenu/build/intermediates/res/merged/androidTest/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/bo108220/AndroidStudioProjects/MyResideMenu/ResideMenu/build/intermediates/bundles/debug/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "47",
+                        "endOffsets": "98"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/bo108220/AndroidStudioProjects/MyNews/ResideMenu/build/intermediates/res/merged/androidTest/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/bo108220/AndroidStudioProjects/MyNews/ResideMenu/build/intermediates/bundles/debug/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "47",
+                        "endOffsets": "98"
+                    }
+                }
+            ]
+        }
+    ]
+}

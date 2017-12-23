@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/bo108220/AndroidStudioProjects/MyNews/ResideMenu/src/main/assets"/><source path="/Users/bo108220/AndroidStudioProjects/MyNews/ResideMenu/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/bo108220/AndroidStudioProjects/MyNews/ResideMenu/src/debug/assets"/></dataSet></merger>
