@@ -15,4 +15,9 @@ public interface MainView {
     void switch2Weather();
 
     void switch2About();
+
+    void dialogThemeClear();
+
+    void dialogThemeOK();
+
 }

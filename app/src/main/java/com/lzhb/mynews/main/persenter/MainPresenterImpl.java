@@ -8,9 +8,12 @@ import android.support.v7.graphics.Palette;
 import android.view.View;
 
 import com.lzhb.mynews.R;
+import com.lzhb.mynews.beans.ThemeBean;
 import com.lzhb.mynews.main.view.MainView;
 import com.special.ResideMenu.ResideMenu;
 import com.special.ResideMenu.ResideMenuItem;
+
+import java.util.List;
 
 /**
  * 创建时间：2017/12/21 18:10
@@ -66,6 +69,25 @@ public class MainPresenterImpl implements MainPresenter {
         return null;
     }
 
+    @Override
+    public void showChangeTheme() {
+        mainView.dialogThemeOK();
+    }
+
+    @Override
+    public void dimsDialogTheme() {
+        mainView.dialogThemeClear();
+    }
+
+    @Override
+    public void loadData(List<ThemeBean> themeBeans){
+        int resId = R.drawable.theme_sel;
+        themeBeans.add(new ThemeBean(resId, Color.RED));
+        themeBeans.add(new ThemeBean(resId, Color.GREEN));
+        themeBeans.add(new ThemeBean(resId, Color.BLUE));
+        themeBeans.add(new ThemeBean(resId, Color.GRAY));
+    }
+
     private ResideMenuItem itemTheme;
 
     /**
@@ -81,7 +103,7 @@ public class MainPresenterImpl implements MainPresenter {
         resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_LEFT);
         itemTheme = new ResideMenuItem(context,
                 R.drawable.theme, "主题");
-        getBitmapPal(itemTheme);
+//        getBitmapPal(itemTheme);
         itemTheme.setOnClickListener((View.OnClickListener) context);
         resideMenu.addMenuItem(itemTheme, ResideMenu.DIRECTION_RIGHT);
     }
@@ -89,8 +111,8 @@ public class MainPresenterImpl implements MainPresenter {
     /**
      * 获取颜色
      */
-    private void getBitmapPal(final ResideMenuItem itemTheme) {
-        
+    private void getBitmapPal(final ResideMenuItem theme) {
+
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(),
                 R.drawable.news_bg);
         Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
@@ -98,8 +120,9 @@ public class MainPresenterImpl implements MainPresenter {
             public void onGenerated(Palette palette) {
                 //有活力的，暗色
                 Palette.Swatch vibrantDark = palette.getVibrantSwatch();
-                itemTheme.setBackgroundColor(vibrantDark.getRgb());
+                theme.setBackgroundColor(vibrantDark.getRgb());
             }
         });
+
     }
 }
