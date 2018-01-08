@@ -17,7 +17,7 @@ public class ImageLoaderUtil {
         if (imageView == null) {
             throw new IllegalArgumentException("argument error");
         }
-        Glide.with(context).load(url).placeholder(R.drawable.ic_launcher)
+        Glide.with(context).load(url).placeholder(R.mipmap.girls)
                 .error(R.drawable.ic_launcher_foreground).crossFade().into(imageView);
     }
 }

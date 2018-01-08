@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".news.widget.NewsDetailActivity"/>
+        <activity
+            android:name=".news.widget.NewsDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
